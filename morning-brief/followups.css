@@ -1,0 +1,30 @@
+/* Follow-ups checklist — appended inside the brief's main <style id="brief-css"> */
+.fu-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.fu-head h2{margin-bottom:14px}
+.fu-count{color:var(--soft);font-size:13px;font-variant-numeric:tabular-nums}
+ul.fu{list-style:none}
+ul.fu li{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-top:1px solid var(--hair)}
+ul.fu li:first-child{border-top:none}
+ul.fu input[type=checkbox]{appearance:none;-webkit-appearance:none;flex:none;width:18px;height:18px;margin-top:2px;border:1.5px solid var(--ink);border-radius:4px;background:var(--bg);cursor:pointer;display:grid;place-content:center}
+ul.fu input[type=checkbox]::after{content:"";width:9px;height:5px;border-left:2px solid var(--bg);border-bottom:2px solid var(--bg);transform:translateY(-1px) rotate(-45deg);opacity:0}
+ul.fu input[type=checkbox]:checked{background:var(--ink)}
+ul.fu input[type=checkbox]:checked::after{opacity:1}
+ul.fu input[type=checkbox]:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
+ul.fu input[type=checkbox]:disabled{cursor:default}
+.fu-body{flex:1;min-width:0}
+.fu-text{color:var(--ink);font-weight:500;text-decoration:none;overflow-wrap:anywhere}
+a.fu-text:hover{text-decoration:underline}
+.fu-meta{display:block;color:var(--soft);font-size:13px;margin-top:1px}
+ul.fu li.done .fu-text{color:var(--grey);text-decoration:line-through}
+ul.fu li.done .fu-meta{color:var(--grey)}
+.fu-x{flex:none;border:none;background:none;color:var(--grey);font-size:18px;line-height:1;padding:2px 4px;cursor:pointer;opacity:0;transition:opacity .15s}
+ul.fu li:hover .fu-x,.fu-x:focus-visible{opacity:1}
+@media (hover:none){.fu-x{opacity:1}}
+.fu-x:hover{color:var(--ink)}
+.fu-add{display:flex;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--hair)}
+.fu-add input{flex:1;min-width:0;font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--edge);border-radius:8px;padding:8px 12px}
+.fu-add input:focus{outline:none;border-color:var(--ink)}
+.fu-add button{flex:none;font:500 13px -apple-system,"Segoe UI",sans-serif;color:#FCFCFB;background:var(--clay);border:1px solid var(--clay);border-radius:8px;padding:9px 16px;cursor:pointer}
+.fu-add button:hover{background:var(--clayh);border-color:var(--clayh)}
+.fu-note{color:var(--soft);font-size:13px;margin-top:8px;min-height:1.3em}
+.fu-ro .fu-add,.fu-ro .fu-x{display:none}
