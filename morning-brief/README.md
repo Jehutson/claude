@@ -9,7 +9,9 @@ adding a task or removing one republishes the page itself (artifact capability
   state into a rendered brief.
 
 Task state lives in `<script type="application/json" id="fu-data">`:
-`{"date": "YYYY-MM-DD", "tasks": [{"id", "text", "href", "meta", "done", "since"}]}`.
+`{"date": "YYYY-MM-DD", "tasks": [{"id", "text", "href", "meta", "done", "since", "slack"}]}`.
+`slack` is the task's row ID in the Slack list "Claude List" (F0CF44919UM); the daily run
+adds tasks without one to that list and drops tasks completed there.
 The weekday "Morning Briefing" scheduled task reads the previous brief's `fu-data`,
 carries unticked tasks forward, and adds new ones from Needs attention and
 Still waiting on your reply.

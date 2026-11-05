@@ -3,7 +3,7 @@
 
 usage: add_followups.py BRIEF.html TASKS.json OUT.html
 
-TASKS.json: {"date": "YYYY-MM-DD", "tasks": [{"id", "text", "href", "meta", "done", "since"}]}
+TASKS.json: {"date": "YYYY-MM-DD", "tasks": [{"id", "text", "href", "meta", "done", "since", "slack"}]}
 
 The output is written in the exact document shape the `artifact` capability
 publishes, so the page can republish itself when a box is ticked. Publish it
